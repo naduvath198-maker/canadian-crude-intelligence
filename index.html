@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="Independent Canadian crude oil market intelligence portfolio dashboard featuring WTI, WCS, pricing differentials and commercial scenario modeling." />
-  <title>Canadian Crude | Energy Market Intelligence — Portfolio</title>
+  <title>Canadian Crude | Energy Intelligence &amp; AI Commercial Portfolio</title>
   <style>
   :root{--navy:#10293d;--navy2:#17394d;--ink:#162c3d;--muted:#647789;--teal:#087c79;--bright:#0eaea3;--blue:#3b6cbd;--orange:#d78a46;--paper:#f5f7fb;--border:#e0e8ef;--card:#fff;--shadow:0 8px 30px rgba(9,33,53,.04)}
   *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:15px;line-height:1.48}
@@ -56,6 +56,24 @@
   @media(max-width:1100px){.interaction-card{grid-template-columns:1fr 1fr}.interaction-card .btn{grid-column:1/-1;justify-self:start}.market-quiz{grid-template-columns:1fr 1fr}}
   @media(max-width:720px){.hero-banner{padding:20px;align-items:flex-start;flex-direction:column}.hero-banner h2{font-size:19px}.interaction-card{grid-template-columns:1fr;padding:17px}.interaction-card .btn{grid-column:auto;width:100%}.chart-controls{width:100%}.metrics{gap:10px}.metric-trend{font-size:10px}.market-quiz{grid-template-columns:1fr}.research-stats{grid-template-columns:1fr}.scenario-actions{display:grid;grid-template-columns:1fr}.scenario-card .num{font-size:18px}.metric .big{font-size:21px}.topbar .portfolio{display:none}}
   @media(prefers-reduced-motion:reduce){.page{animation:none}.metric,.preset-btn{transition:none}}
+
+  /* AI & Commercial Skills Lab: distinct evidence of applied analysis and human review */
+  .skill-banner{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 19px;margin:0 0 20px;background:linear-gradient(105deg,#eaf8f5,#f0f5fd);border:1px solid #d4e7e8;border-radius:13px}
+  .skill-banner strong{color:#123f51}.skill-banner p{margin:4px 0 0;font-size:12px;color:#527081}
+  .skills-row{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}.skill-pill{font-size:10px;border:1px solid #d2e6e3;color:#176f69;background:#f4fbfa;border-radius:50px;padding:5px 9px;font-weight:800}
+  .lab-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:17px}.lab-grid>.panel{margin-bottom:0}
+  .lab-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:0 0 19px}.lab-step{padding:14px;border-radius:11px;background:#f8fbfd;border:1px solid #e0e8ef}.lab-step .nr{font-size:10px;color:#087b71;font-weight:800;letter-spacing:.09em}.lab-step strong{display:block;font-size:12px;margin:5px 0}.lab-step p{font-size:11px;color:#627b8b;margin:0}
+  .lab-field{display:grid;gap:7px;margin-bottom:14px}.lab-field label{font-size:11px;font-weight:800;color:#566e7d}.lab-field select,.lab-field textarea,.lab-field input{border:1px solid #d5e2e8;border-radius:9px;background:#f8fbfc;color:#1b3a4d;padding:11px 12px;font:inherit;width:100%}.lab-field textarea{min-height:100px;resize:vertical}.lab-field select:focus,.lab-field textarea:focus,.lab-field input:focus{background:white}
+  .lab-actions{display:flex;flex-wrap:wrap;gap:9px;margin:13px 0}.lab-actions .btn{flex:1;min-width:140px}
+  .prompt-output{white-space:pre-wrap;word-break:break-word;min-height:240px;max-height:430px;overflow:auto;background:#112e42;color:#e6f4f8;padding:17px;border-radius:11px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:11px;line-height:1.7;border:1px solid #26485b}
+  .brief-output{background:#f9fcfd;border:1px solid #dce9ed;border-radius:11px;padding:17px;white-space:pre-line;color:#2a4d5b;font-size:12px;min-height:225px;line-height:1.8}
+  .qa-stack{display:grid;gap:10px;margin-top:14px}.qa-stack label{display:flex;align-items:flex-start;gap:9px;font-size:12px;color:#496675}.qa-stack input{margin-top:3px;accent-color:#06877f}
+  .qa-result{font-size:11px;color:#5e7a88;min-height:18px}
+  .lab-proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px 0}.lab-proof article{border:1px solid #dde9ee;background:white;border-radius:12px;padding:18px}.lab-proof b{display:block;font-size:13px;color:#193c50}.lab-proof p{font-size:11px;color:#617989}.lab-proof .skill-pill{display:inline-block;margin-top:6px}
+  .brief-slide{background:white;border-left:4px solid #0eaaa0;border-radius:9px;padding:15px 16px;margin:12px 0;border-top:1px solid #e7edf2;border-right:1px solid #e7edf2;border-bottom:1px solid #e7edf2}
+  .brief-slide h3{margin:0 0 6px;font-size:13px}.brief-slide p{margin:0;color:#567182;font-size:12px}
+  @media(max-width:960px){.lab-grid{grid-template-columns:1fr}.lab-steps{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:720px){.skill-banner{flex-direction:column;align-items:flex-start}.lab-proof{grid-template-columns:1fr}.lab-steps{grid-template-columns:1fr}.lab-actions{display:grid;grid-template-columns:1fr}.lab-actions .btn{width:100%}}
   </style>
 </head>
 <body>
@@ -66,6 +84,7 @@
       <button class="active" data-page="overview"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Market overview</button>
       <button data-page="analysis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 19h18M5 15l5-6 4 3 5-7"/></svg>WCS–WTI analysis</button>
       <button data-page="simulator"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 9h8M8 13h4m4 0h1"/></svg>Scenario simulator</button>
+      <button data-page="lab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 9 9l-6 3 6 3 3 6 3-6 6-3-6-3-3-6Z"/><path d="m18 2 1 2 2 1-2 1-1 2"/></svg>AI &amp; Commercial Lab</button>
       <button data-page="sources"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 4 16 4 16 0V5M4 11v7c0 4 16 4 16 0v-7"/></svg>Data & methodology</button>
     </nav></div>
     <div class="side-bottom"><div class="tiny">Portfolio case study</div><strong>Canadian crude markets</strong><p>Benchmark prices → market insights → commercial decisions.</p></div>
@@ -77,6 +96,7 @@
       <section id="page-overview" class="page active">
         <div class="hero-banner"><div><small>Explore • Model • Explain</small><h2>From market signals to commercial decisions</h2><p>Explore monthly Canadian crude benchmarks, investigate the WCS discount, then stress-test a hypothetical producer's gross revenue.</p></div><button class="btn hero-action" data-goto="simulator">Run a scenario ↗</button></div>
 
+        <div class="skill-banner"><div><strong>New: applied AI + commercial toolkit</strong><p>Explore a source-grounded AI prompt workbench, Excel handoff, client briefing and CRM-style account planning.</p><div class="skills-row"><span class="skill-pill">Generative AI</span><span class="skill-pill">Excel + CSV</span><span class="skill-pill">PowerPoint briefing</span><span class="skill-pill">Customer success / CRM</span></div></div><button class="btn primary" data-goto="lab" type="button">Explore the skills lab ↗</button></div>
         <div class="header"><div><div class="eyebrow">Market intelligence / dashboard 01</div><h1>Canadian Crude Market Overview</h1><p class="lede">Understand crude benchmark pricing, changing discounts and the commercial context facing Western Canadian producers.</p></div><div class="toolbar"><span class="status" id="period-status">DEMO • 2024–2026</span></div></div>
         <div class="metrics"><div class="metric"><div class="caption">WTI benchmark</div><div id="kpi-wti" class="big">—</div><div class="detail">Latest available · USD/bbl</div><span class="metric-trend neutral" id="trend-wti">Change vs previous month</span></div><div class="metric"><div class="caption">WCS benchmark</div><div id="kpi-wcs" class="big">—</div><div class="detail">Latest available · USD/bbl</div><span class="metric-trend neutral" id="trend-wcs">Change vs previous month</span></div><div class="metric"><div class="caption">WCS discount</div><div id="kpi-gap" class="big">—</div><div class="detail">WTI minus WCS · USD/bbl</div><span class="metric-trend neutral" id="trend-gap">Change vs previous month</span></div><div class="metric"><div class="caption">USD / CAD</div><div id="kpi-fx" class="big">—</div><div class="detail">CAD per USD · monthly average</div><span class="metric-trend neutral" id="trend-fx">Change vs previous month</span></div></div>
         <div class="grid2">
@@ -110,6 +130,52 @@
         <div class="panel"><div class="panel-title"><div><h2>WTI × differential sensitivity matrix</h2><p class="sub">Indicative gross revenue (CAD millions) under alternative WTI prices and WCS discounts; all other what-if inputs held constant.</p></div></div><div class="sensitivity" id="sensitivity"></div></div>
         <div class="notice"><span>ℹ</span><div><b>Not a profit forecast.</b> Assumes all production sells at the modeled WCS benchmark. Excludes transportation, crude quality, realized discounts, hedging, royalties, variable costs, downtime, taxes and other operational/commercial effects.</div></div>
       </section>
+
+      <section id="page-lab" class="page">
+        <div class="hero-banner"><div><small>Evidence over buzzwords</small><h2>AI &amp; Commercial Skills Lab</h2><p>A hands-on, auditable workflow: prepare market data, write a grounded AI research prompt, check facts, and create a customer-ready briefing. No proprietary S&amp;P Global data or systems are used.</p></div><button class="btn hero-action" data-goto="simulator" type="button">Explore commercial model ↗</button></div>
+        <div class="header"><div><div class="eyebrow">Applied skills / workflow 04</div><h1>Human-led analysis, AI-assisted communication</h1><p class="lede">This portfolio demonstrates prompt design, source discipline, Excel-ready calculations, presentation structuring and account-planning concepts. AI model calls are deliberately <strong>not</strong> claimed: the site builds prompts for use in a generative AI tool and produces rule-based summaries from the loaded data.</p></div></div>
+        <div class="lab-steps">
+          <div class="lab-step"><span class="nr">01 / DATA</span><strong>Inspect inputs</strong><p>Load public WCS, WTI and FX observations; calculate auditable spreads.</p></div>
+          <div class="lab-step"><span class="nr">02 / PROMPT</span><strong>Frame the question</strong><p>Create an analyst prompt with evidence, constraints and output format.</p></div>
+          <div class="lab-step"><span class="nr">03 / REVIEW</span><strong>Verify &amp; challenge</strong><p>Check numerical facts, source limitations and unsupported causal claims.</p></div>
+          <div class="lab-step"><span class="nr">04 / CLIENT</span><strong>Communicate clearly</strong><p>Produce an executive brief, presentation outline or account follow-up.</p></div>
+        </div>
+        <div class="lab-grid">
+          <div class="panel"><div class="panel-title"><div><h2>Generative AI prompt designer</h2><p class="sub">Generate a reusable, data-grounded prompt for an external AI assistant.</p></div><span class="tag">HUMAN IN CONTROL</span></div>
+            <div class="lab-field"><label for="ai-task">Choose the business task</label><select id="ai-task"><option value="market">Weekly energy market briefing</option><option value="sales">Sales discovery preparation</option><option value="cx">Customer success training note</option><option value="challenge">Challenge a market interpretation</option></select></div>
+            <div class="lab-field"><label for="ai-audience">Intended reader</label><select id="ai-audience"><option value="Canadian upstream producer">Canadian upstream producer</option><option value="Commercial account manager">Commercial account manager</option><option value="New customer / onboarding analyst">New customer / onboarding analyst</option><option value="Senior management">Senior management</option></select></div>
+            <div class="lab-field"><label for="ai-goal">Customer question / objective</label><textarea id="ai-goal" maxlength="600">Explain the change in the WCS–WTI discount and what a Canadian producer should monitor next.</textarea></div>
+            <div class="lab-actions"><button class="btn primary" id="ai-build" type="button">Build grounded AI prompt ↗</button><button class="btn" id="ai-copy" type="button">Copy prompt</button></div>
+            <div id="ai-prompt" class="prompt-output" aria-live="polite">Choose a task and click “Build grounded AI prompt”.</div>
+            <p class="smallprint">This is a prompt-engineering demonstration, not an embedded ChatGPT/API integration. Copy the prompt into an AI tool, inspect its answer and verify every factual claim before sharing. Never include confidential client or SLB information.</p><div class="live-note" id="ai-status" aria-live="polite"></div>
+          </div>
+          <div class="panel"><div class="panel-title"><div><h2>Source-grounded analyst snapshot</h2><p class="sub">Deterministic calculations from the website's loaded monthly dataset — not AI-generated.</p></div><span class="tag">REPRODUCIBLE</span></div>
+            <div id="ai-facts" class="brief-output" aria-live="polite"></div>
+            <div class="lab-actions"><button class="btn" id="ai-export-excel" type="button">↓ Excel-ready CSV</button><button class="btn" id="ai-export-prompt" type="button">↓ Prompt + data notes</button></div>
+            <h2 style="margin-top:22px">AI output review checklist</h2><p class="sub">Check each item after verifying a generated draft against original material.</p>
+            <div class="qa-stack"><label><input type="checkbox" class="qa-check"> Source values and selected period match the original files</label><label><input type="checkbox" class="qa-check"> FX conventions, USD/bbl units and calculation are correct</label><label><input type="checkbox" class="qa-check"> No unproven causal explanation or invented forecast</label><label><input type="checkbox" class="qa-check"> Confidential information excluded; audience and uncertainty clear</label></div>
+            <p id="qa-status" class="qa-result" aria-live="polite">0 of 4 review steps marked. This checklist is self-reported, not an external audit.</p>
+          </div>
+        </div>
+        <div class="lab-proof">
+          <article><b>Excel / Power Query mindset</b><p>Structured input schema; USD/CAD transformations; formulas, model sensitivity and reusable CSV handoff for Excel or PivotTables.</p><span class="skill-pill">Excel modeling</span></article>
+          <article><b>PowerPoint storytelling</b><p>Build a three-slide customer briefing: market movement → commercial implication → recommended follow-up.</p><span class="skill-pill">Presentation skills</span></article>
+          <article><b>CRM-style client planning</b><p>Capture a hypothetical account need, next step and research deliverable. This is a training-style mockup, not a real CRM connection.</p><span class="skill-pill">Customer success</span></article>
+        </div>
+        <div class="lab-grid">
+          <div class="panel"><div class="panel-title"><div><h2>Customer briefing builder</h2><p class="sub">Editable, presentation-ready storyline generated from the latest loaded market snapshot.</p></div></div>
+            <div id="client-slides"></div><div class="lab-actions"><button class="btn primary" id="brief-copy" type="button">Copy slide outline</button><button class="btn" id="brief-export" type="button">↓ Export PowerPoint outline (.txt)</button></div>
+            <p class="smallprint">This is a slide outline that you can adapt in Microsoft PowerPoint; it is not a finished PowerPoint presentation.</p>
+          </div>
+          <div class="panel"><div class="panel-title"><div><h2>Mock customer success account note</h2><p class="sub">Plan a professional follow-up using a simple CRM-style structure.</p></div><span class="tag">SIMULATED ACCOUNT</span></div>
+            <div class="lab-field"><label for="client-sector">Hypothetical account segment</label><select id="client-sector"><option>Canadian oil &amp; gas producer</option><option>Commodity trading desk</option><option>Energy investment research team</option><option>Midstream operator</option></select></div>
+            <div class="lab-field"><label for="client-need">Client's stated analytical need</label><input id="client-need" maxlength="180" value="Understand WCS pricing exposure and FX sensitivity"></div>
+            <div class="lab-field"><label for="client-next">Proposed next action</label><select id="client-next"><option>Schedule a 20-minute dashboard walkthrough</option><option>Send a source-backed market brief</option><option>Set up product / data training session</option><option>Confirm research questions with sales lead</option></select></div>
+            <div class="lab-actions"><button class="btn primary" id="client-note-build" type="button">Build account note ↗</button><button class="btn" id="client-note-copy" type="button">Copy CRM note</button></div>
+            <div class="brief-output" id="client-note" aria-live="polite"></div><p class="smallprint">Fictional example only; no client contacts are stored or transmitted.</p>
+          </div>
+        </div>
+      </section>
       <section id="page-sources" class="page">
         <div class="header"><div><div class="eyebrow">Evidence & reproducibility / appendix</div><h1>Data Sources & Methodology</h1><p class="lede">A transparent data trail matters as much as the charts. The demo observations are not actual market prices and must be replaced before using the analysis in an application.</p></div></div>
         <div class="panel"><h2>Replace demonstration values with sourced monthly data</h2><p class="smallprint" style="font-size:12px;margin-top:9px">Prepare a CSV with headers <code>Month,WTI_USD_bbl,WCS_USD_bbl,USD_CAD</code> and one row per complete month, such as <code>2026-09,72.00,55.00,1.3900</code> (example only). Ensure dates, units, averaging methods and price definitions align across sources.</p><div class="toolbar" style="margin:18px 0 4px;flex-wrap:wrap"><label class="btn primary" for="upload-csv" style="cursor:pointer">↑ Import your CSV</label><input id="upload-csv" class="file-input" type="file" accept=".csv,text/csv"><button class="btn" id="template-csv">↓ Download CSV template</button><button class="btn" id="restore-demo">↺ Restore demonstration data</button></div><div class="uploadnote" id="upload-status">Browser imports work locally and do not change the public website. To update the public dashboard, upload a verified CSV named market_data.csv to the repository root; no data is uploaded to a server. Imported values are not automatically verified.</div></div>
@@ -132,7 +198,7 @@ let rows=DEMO.map(r=>({...r})),dataMode='demo',range='all',initialized=false;
 let chartCurrency='USD',focusIndex=null,baseIndex=null;const baseRow=()=>baseIndex===null?last():(rows[baseIndex]||last());
 const $=id=>document.getElementById(id), money=v=>new Intl.NumberFormat('en-CA',{style:'currency',currency:'CAD',notation:'compact',maximumFractionDigits:2}).format(v), usd=v=>'$'+v.toFixed(2), fixed=v=>v.toFixed(2), monthLabel=d=>new Date(d+'-01T12:00:00').toLocaleDateString('en-CA',{month:'short',year:'numeric'});
 const last=()=>rows[rows.length-1],getGap=r=>r.wti-r.wcs;
-function displayPage(page){document.querySelectorAll('.page').forEach(x=>x.classList.toggle('active',x.id==='page-'+page));document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.page===page));$('crumb').textContent=({overview:'Overview',analysis:'WCS–WTI analysis',simulator:'Scenario simulator',sources:'Sources & methodology'})[page];window.scrollTo({top:0,behavior:'smooth'});if(page==='simulator')calcScenario();}
+function displayPage(page){document.querySelectorAll('.page').forEach(x=>x.classList.toggle('active',x.id==='page-'+page));document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.page===page));$('crumb').textContent=({overview:'Overview',analysis:'WCS–WTI analysis',simulator:'Scenario simulator',lab:'AI & commercial skills',sources:'Sources & methodology'})[page];window.scrollTo({top:0,behavior:'smooth'});if(page==='simulator')calcScenario();}
 document.querySelectorAll('button[data-page],button[data-goto]').forEach(x=>x.addEventListener('click',()=>displayPage(x.dataset.page||x.dataset.goto)));
 document.querySelectorAll('button[data-range]').forEach(x=>x.addEventListener('click',()=>{range=x.dataset.range;document.querySelectorAll('button[data-range]').forEach(b=>b.classList.toggle('active',b.dataset.range===range));drawPrices()}));
 function visibleRows(){return range==='all'?rows:rows.slice(-Number(range))}
@@ -173,6 +239,60 @@ function updateScenarioTakeaway({volume,days,wti,dis,fx,baseWcs,whatWcs,baseFx,b
 $('scenario-csv').addEventListener('click',()=>{const r=baseRow(),volume=clamp(+$('sim-volume').value,1,500000),days=clamp(+$('sim-days').value,1,365),wti=clamp(+$('sim-wti').value,0,300),discount=clamp(+$('sim-discount').value,0,200),fx=clamp(+$('sim-fx').value,.1,4),wcs=Math.max(0,wti-discount),baseRev=r.wcs*r.fx*volume*days,whatRev=wcs*fx*volume*days;const header='Scenario,Month,WTI_USD_bbl,WCS_discount_USD_bbl,WCS_USD_bbl,USD_CAD,Bbl_per_day,Days,Gross_revenue_CAD';const line=(name,month,w,disc,ww,ff,rev)=>[name,month,w.toFixed(2),disc.toFixed(2),ww.toFixed(2),ff.toFixed(4),volume,days,rev.toFixed(2)].join(',');exportText('canadian_crude_commercial_scenarios.csv',header+'\n'+line('Base',r.date,r.wti,getGap(r),r.wcs,r.fx,baseRev)+'\n'+line('What-if','Assumption',wti,discount,wcs,fx,whatRev)+'\n','text/csv');});
 $('scenario-share').addEventListener('click',async()=>{const keys={wti:'sim-wti',discount:'sim-discount',fx:'sim-fx',volume:'sim-volume',days:'sim-days'};const url=new URL(window.location.href);url.search='';url.searchParams.set('page','simulator');url.searchParams.set('base',baseRow().date);for(const [k,id] of Object.entries(keys))url.searchParams.set(k,$(id).value);try{await navigator.clipboard.writeText(url.toString());$('share-status').textContent='Scenario link copied. Anyone opening it sees these assumptions against the same published data.'}catch(e){$('share-status').textContent='Copy this scenario URL: '+url.toString()}});
 function applyScenarioQuery(){const q=new URLSearchParams(location.search);if(q.get('page')!=='simulator')return;const base=q.get('base');if(base){const idx=rows.findIndex(r=>r.date===base);if(idx>=0)baseIndex=idx;}const keys={wti:'sim-wti',discount:'sim-discount',fx:'sim-fx',volume:'sim-volume',days:'sim-days'};for(const [k,id] of Object.entries(keys)){const v=q.get(k);if(v!==null&&v!==''&&Number.isFinite(+v))$(id).value=v;}refreshInteractive();calcScenario();displayPage('simulator');}
+
+
+// AI & commercial skills lab — data-grounded templates, not a live model or CRM connection.
+let analystPrompt='',briefOutline='',crmNote='';
+function fmtDelta(n){return (n>=0?'+':'−')+Math.abs(n).toFixed(2)}
+function aiDataBlock(){const r=last(),p=rows[rows.length-2],arr=rows.map(getGap),avg=arr.reduce((a,b)=>a+b,0)/arr.length;return [
+  'DATA STATUS: '+(dataMode==='demo'?'SYNTHETIC DEMONSTRATION SERIES':dataMode==='published'?'PUBLISHED CSV — SOURCE VALUES NOT INDEPENDENTLY AUDITED':'LOCAL IMPORT — UNVERIFIED'),
+  'PERIOD: '+rows[0].date+' through '+r.date+' ('+rows.length+' monthly observations)',
+  'LATEST MONTH: '+r.date,
+  'WTI: '+r.wti.toFixed(2)+' USD/bbl; prior '+p.wti.toFixed(2)+' USD/bbl',
+  'WCS: '+r.wcs.toFixed(2)+' USD/bbl; prior '+p.wcs.toFixed(2)+' USD/bbl',
+  'WTI minus WCS discount: '+getGap(r).toFixed(2)+' USD/bbl; prior '+getGap(p).toFixed(2)+' USD/bbl',
+  'Monthly discount change: '+fmtDelta(getGap(r)-getGap(p))+' USD/bbl',
+  'Sample average discount: '+avg.toFixed(2)+' USD/bbl',
+  'USD/CAD: '+r.fx.toFixed(4)+' CAD per USD',
+  'Source documents to audit: Alberta Economic Dashboard, Alberta Open Government data and Bank of Canada. The price series in the uploaded CSV is not independently reconciled with original Alberta observations.'
+].join('\n')}
+function renderLabFacts(){const r=last(),p=rows[rows.length-2],gap=getGap(r),delta=gap-getGap(p);$('ai-facts').textContent='ANALYTICAL SNAPSHOT · '+r.date+'\n\nWTI: '+usd(r.wti)+' / bbl\nWCS: '+usd(r.wcs)+' / bbl\nWCS discount: '+usd(gap)+' / bbl\nMoM spread change: '+fmtDelta(delta)+' USD/bbl\nUSD/CAD: '+r.fx.toFixed(4)+' CAD per USD\n\nCommercial interpretation: the discount '+(delta>0?'widened':delta<0?'narrowed':'held steady')+' relative to the prior month. That changes a WCS-linked price assumption, all else equal. The data alone cannot explain its cause.\n\nSTATUS: '+(dataMode==='demo'?'synthetic example':dataMode==='published'?'uploaded prices — original-source audit outstanding':'locally imported — unverified')+'.';renderClientSlides();}
+function promptText(){const task=$('ai-task').value,objectives={market:'Write a short, source-grounded energy market briefing.',sales:'Prepare discovery questions and a briefing for a commercial account manager.',cx:'Draft a client onboarding/training note explaining WCS and WTI price analytics.',challenge:'Critique potential interpretations and identify what would need to be verified.'};return [
+'ROLE: You are a cautious energy-markets analyst assisting a commercial & customer success team.',
+'TASK: '+objectives[task],
+'AUDIENCE: '+$('ai-audience').value,
+'USER OBJECTIVE: '+$('ai-goal').value.trim(),
+'', 'DATA PROVIDED (calculate only from these facts):',aiDataBlock(),'',
+'RESEARCH RULES:',
+'1. Identify these as loaded dashboard values; do not imply they are live or independently verified.',
+'2. Show any spread calculation explicitly: WTI minus WCS. Keep USD/bbl and USD/CAD conventions correct.',
+'3. Separate observed facts, plausible hypotheses and customer recommendations.',
+'4. Do not invent a cause, forecast, client name, source quotation or numerical observation.',
+'5. If a claim needs an external source, mark [VERIFY WITH ORIGINAL SOURCE] and give a suggested source.',
+'6. Treat data as public training material; do not request or disclose confidential operational/client records.',
+'OUTPUT FORMAT: 3 concise insights, 2 caveats, 3 recommended client follow-up questions, and a two-sentence executive summary.'
+].join('\n')}
+function buildPrompt(){analystPrompt=promptText();$('ai-prompt').textContent=analystPrompt;$('ai-status').textContent='Prompt prepared from the currently loaded market dataset. No AI model has been called.'}
+$('ai-build').addEventListener('click',buildPrompt);
+$('ai-copy').addEventListener('click',async()=>{buildPrompt();try{await navigator.clipboard.writeText(analystPrompt);$('ai-status').textContent='Prompt copied. Paste it into your chosen AI assistant and audit the response.'}catch(e){$('ai-status').textContent='Browser blocked clipboard access; select the prompt text and copy it manually.'}});
+$('ai-export-prompt').addEventListener('click',()=>{buildPrompt();exportText('AI_market_research_prompt_and_notes.txt',analystPrompt,'text/plain')});
+$('ai-export-excel').addEventListener('click',()=>exportText('canadian_crude_excel_workbook_input.csv',csvData(),'text/csv'));
+function briefText(){const r=last(),p=rows[rows.length-2],delta=getGap(r)-getGap(p);return [
+'CLIENT MARKET BRIEF | '+monthLabel(r.date),'Data status: '+(dataMode==='demo'?'synthetic sample':dataMode==='published'?'public CSV / original-source verification pending':'browser-imported / source verification pending'),'',
+'SLIDE 1 — BENCHMARK SNAPSHOT','WTI '+usd(r.wti)+' USD/bbl; WCS '+usd(r.wcs)+' USD/bbl; WCS discount '+usd(getGap(r))+' USD/bbl.','The discount '+(delta>0?'widened by ':delta<0?'narrowed by ':'changed by ')+usd(Math.abs(delta))+' USD/bbl versus the prior month.','',
+'SLIDE 2 — COMMERCIAL RELEVANCE','For a hypothetical heavy-oil producer, a larger WCS discount lowers the WCS-linked price relative to WTI, other things equal.','Use the scenario simulator to separate changes in price, FX and saleable volume. Do not equate indicative gross revenue with profit.','',
+'SLIDE 3 — CUSTOMER FOLLOW-UP','1. Confirm the relevant realized-price benchmark and exposure.','2. Explore transport, crude-quality and contract adjustments before drawing conclusions.','3. Offer a product training/demo and agree on additional market research.','',
+'LIMITATIONS: Source observations remain subject to audit; no causal inference or forecast is made. This is an independent portfolio exercise.'
+].join('\n')}
+function renderClientSlides(){briefOutline=briefText();const r=last(),p=rows[rows.length-2],delta=getGap(r)-getGap(p);const sl=[['01 · Market snapshot','WTI '+usd(r.wti)+' / WCS '+usd(r.wcs)+'; WCS discount '+usd(getGap(r))+' per barrel ('+fmtDelta(delta)+' MoM).'],['02 · Customer implications','A change in the discount changes the benchmark-linked price assumption. Review FX, volumes and commercial terms before interpreting revenue.'],['03 · Proposed follow-up','Confirm customer exposure, demonstrate the scenario tool and agree on additional market research.']];$('client-slides').replaceChildren(...sl.map(([heading,body])=>{let d=document.createElement('div');d.className='brief-slide';let h=document.createElement('h3');h.textContent=heading;let p=document.createElement('p');p.textContent=body;d.append(h,p);return d}));}
+$('brief-copy').addEventListener('click',async()=>{briefOutline=briefText();try{await navigator.clipboard.writeText(briefOutline);$('ai-status').textContent='Presentation outline copied.'}catch(e){$('ai-status').textContent='Copy unavailable; use the download option.'}});
+$('brief-export').addEventListener('click',()=>{briefOutline=briefText();exportText('customer_briefing_powerpoint_outline.txt',briefOutline)});
+function updateCRMNote(){crmNote=['TRAINING EXAMPLE — NOT AN ACTUAL CRM RECORD','Account segment: '+$('client-sector').value,'Need: '+$('client-need').value.trim().slice(0,180),'Reference period: '+last().date,'Proposed action: '+$('client-next').value,'Next deliverable: 3-slide market briefing, source review and a scenario demonstration.','Owner: commercial associate (hypothetical)','Client records: none stored'].join('\n');$('client-note').textContent=crmNote;}
+$('client-note-build').addEventListener('click',updateCRMNote);
+$('client-note-copy').addEventListener('click',async()=>{updateCRMNote();try{await navigator.clipboard.writeText(crmNote);$('ai-status').textContent='CRM-style mock note copied.'}catch(e){$('ai-status').textContent='Copy unavailable; select the account note text manually.'}});
+document.querySelectorAll('.qa-check').forEach(el=>el.addEventListener('change',()=>{const count=document.querySelectorAll('.qa-check:checked').length;$('qa-status').textContent=count+' of 4 review steps marked. '+(count===4?'Human review checklist completed, but original-source auditing is still required.':'This checklist is self-reported, not an external audit.')}));
+// Extend renderer so uploaded CSV changes are reflected in the lab as well.
+const previousRenderAll=renderAll;renderAll=function(){previousRenderAll();renderLabFacts();buildPrompt();updateCRMNote();};
 
 initialized=true;renderAll();
 if(location.protocol==='file:')applyScenarioQuery();
