@@ -5,6 +5,17 @@ Interactive, dependency-free static website built for a commercial and customer-
 ## Important data disclaimer
 The supplied WTI, WCS, and USD/CAD observations in `index.html` are **synthetic demonstration values**, not real market observations. Before sharing it as market research, replace them with sourced, verified data using the CSV import available under **Data & Methodology**. Verify period, units, benchmark definitions and observations against the cited official sources. The website shows imported data as *unverified* until you separately check it.
 
+## AI & Commercial Skills Lab
+The website includes a separate, interactive **AI & Commercial Lab**:
+
+- Model-agnostic generative AI prompt builder using the currently displayed WCS, WTI and USD/CAD observations.
+- Human verification checklist requiring original-source checks, unit consistency, conservative interpretations and confidentiality.
+- Excel-compatible data export and a reproducible calculation trail; the interactive website is not itself a Microsoft Excel implementation.
+- Three-slide PowerPoint outline generator. The output is an editable text outline, **not** an automatically created .pptx file.
+- A **fictional** customer success / CRM-style account note for practicing a client conversation. The app is not integrated into an actual CRM.
+
+The site does **not** call a hosted large language model, independently verify sources, access S&P proprietary tools, or make predictions. AI prompts are for use in a separate AI assistant, with outputs subject to human review. No confidential client or SLB data is intended to be entered.
+
 ## Preview locally
 Open `index.html` in any recent browser. No server or installation is required. If your browser restricts opening local HTML files, run `python -m http.server 8000` inside this folder and open `http://localhost:8000`.
 
