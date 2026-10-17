@@ -10,7 +10,7 @@ The website includes a separate, interactive **AI & Commercial Lab**:
 
 - Model-agnostic generative AI prompt builder using the currently displayed WCS, WTI and USD/CAD observations.
 - Human verification checklist requiring original-source checks, unit consistency, conservative interpretations and confidentiality.
-- Excel-compatible data export and a reproducible calculation trail; the interactive website is not itself a Microsoft Excel implementation.
+- Excel-compatible data export and a reproducible calculation trail. The lab also contains a **downloadable, formula-driven Excel workbook** that uses the 12 public-CSV observations available when the workbook was built. The embedded workbook is a static snapshot and **does not update when `market_data.csv` changes**. Benchmark prices remain source-attributed but not independently audited.
 - Three-slide PowerPoint outline generator. The output is an editable text outline, **not** an automatically created .pptx file.
 - A **fictional** customer success / CRM-style account note for practicing a client conversation. The app is not integrated into an actual CRM.
 
