@@ -26,7 +26,7 @@ Month,WTI_USD_bbl,WCS_USD_bbl,USD_CAD
 2026-08,73.00,57.00,1.3800
 2026-09,72.00,55.00,1.3900
 ```
-Monthly observations must be aligned to the same period. CSV imports affect the browser's session only; they do not rewrite the website for other visitors. For a **permanent public portfolio with verified data**, replace the `DEMO` initial array in `index.html` with audited monthly values or edit the site to load a committed verified CSV. Don't claim it is historical until that change is made.
+Monthly observations must be aligned to the same period. **Permanent publication:** This website now automatically tries to load `market_data.csv` from the repository root on each page load. After combining official price and FX sources into the four-column schema, upload the finalized CSV using exactly that filename alongside `index.html` in the `main` branch. The dashboard will then show the published values for every visitor. If the file is missing or invalid, the site falls back to labeled synthetic data. **Preview imports remain browser-only** and do not publish data. The website labels published CSV as requiring source verification; verify and document source details before claiming historical accuracy.
 
 ## Metrics
 - WCS discount (USD/bbl) = WTI − WCS
